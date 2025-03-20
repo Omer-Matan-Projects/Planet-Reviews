@@ -1,0 +1,236 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: white;
+}
+#main {
+    width: 90%;
+    height: 100%;
+    border: 4px solid;
+    border-color: #a6a6a6;
+    border-spacing: 0;
+}
+#header {
+    background-color: #a6a6a6;
+    height: 40px;
+    text-align: center;
+    vertical-align: top;
+}
+#planetlink {
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #262626;
+    transition: color 0.3s; /* Add a smooth transition for color change */
+    box-align : left;
+}
+#planetlink:hover {
+    color: #f58221;
+}
+#menu {
+    background-color: #f58221;
+    height: 60px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #262626;
+}
+#menu1 {
+    transition: color 0.3s;
+}
+#menu2 {
+    transition: color 0.3s;
+}
+#menu3 {
+    transition: color 0.3s;
+}
+#menu1:hover {
+    color: white;
+}
+#menu2:hover {
+    color: white;
+}
+#menu3:hover {
+    color: white;
+}
+#movieinfo {
+    background-color: #262626;
+    height: 500px;
+    text-align: left;
+}
+#poster {
+    border: 4px solid;
+    border-color: #a6a6a6;
+    margin-left: 30px;
+}
+#trailer {
+    border: 4px solid;
+    border-color: #a6a6a6;
+}
+#rating {
+    background-color: #f58221;
+    height: 60px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #262626;
+}
+#img1star {
+    display: none;
+    vertical-align:middle;
+}
+#img2star {
+    display: none;
+    vertical-align:middle;
+}
+#img3star {
+    display: none;
+    vertical-align:middle;
+}
+#img4star {
+    display: none;
+    vertical-align:middle;
+}
+#img5star {
+    display: none;
+    vertical-align:middle;
+}
+#imdb {
+    vertical-align:middle;
+}
+button {
+    font-family: Segoe UI;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262626;
+    width: 150px;
+    height: 40px;
+    cursor:pointer; /* Changes the shape of the cursor */
+    color: #f58221;
+    background-color: #262626;
+    border-radius: 20px; /* Round edges */
+    box-shadow: 0 3px #a6a6a6;
+    transition: color 0.3s;
+    vertical-align:middle;
+}
+button:hover {
+    color: white;
+}
+#TTR {
+    display: none;
+    font-size: 16px;
+}
+#languageButtonEN {
+    display: none;
+    background-image: url("UK.png");
+    background-size: cover; /* Fits the image to the size of the button */
+    background-position: center; /* Center the image */
+    width: 60px;
+}
+#languageButtonFR {
+    display: none;
+    background-image: url("France.png");
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+}
+#languageButtonDE {
+    display: none;
+    background-image: url("Germany.png");
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+}
+#languageButtonIT {
+    display: none;
+    background-image: url("Italy.png");
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+}
+#formtable {
+    display: none;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+input {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #262626;
+}
+select {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #262626;
+}
+option {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #262626;
+}
+textarea {
+    font-family: Segoe UI;
+    font-size: 20px;
+    color: #262626;
+    resize: none;
+    width: 100%;
+    height: 300px;
+}
+#charsCounter {
+    font-size: 16px;
+    color: #a6a6a6;
+    text-align: right;
+    margin: auto;
+    margin-top: 2px;
+}
+#sendbutton {
+    font-weight: bold;
+    width: 250px;
+    cursor:pointer;
+}
+#resetbutton {
+    font-weight: bold;
+    width: 250px;
+    cursor:pointer;
+}
+#reviewstable {
+    display: none;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+#reviewHeader {
+    font-size: 26px;
+    color: #a6a6a6;
+}
+#reviewStars {
+    font-size: 26px;
+    color: #f58221;
+}
+#reviewFreeText {
+    font-size: 16px;
+    margin-top: 15px;
+}
+hr {
+    border-color: #f58221;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#links {
+    background-color: #a6a6a6;
+    height: 40px;
+    text-align: center;
+    vertical-align: top;
+    font-weight: bold;
+    color: #262626;
+}

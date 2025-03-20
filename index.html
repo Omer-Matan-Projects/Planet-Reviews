@@ -1,0 +1,153 @@
+<html>
+
+    <head>
+        <title>PLANET Reviews</title>
+        <link rel="stylesheet" href="HomePage.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- calls an outside function that pulls axios code and uses it to for calling Google Translate-->
+        <script src="HomePage.js"></script>
+        <script src="ShowSaveReviews.js"></script>
+    </head>
+        
+    <body>
+
+        <table id="main">
+
+            <tr id="header">
+                <td colspan="3"><a id="planetlink" href="https://www.planetcinema.co.il/#/">Order tickets Here</a></td>
+            </tr>
+
+            <tr>
+                <td colspan="4"><img src="Logo.png" width="100%"></td>
+            </tr>
+
+            <!-- &nbsp; = Backspace -->
+            <tr id="menu"> 
+                <td colspan="3"><a id="menu1">This Week Best</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="menu2">New Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="menu3">Top 10 - 2024</a></td>
+            </tr>
+
+            <tr id="movieinfo">
+                <td><img id="poster" src="AnyoneButYou.jpg" alt="AnyoneButYou" height="400px" width="300px"></td>
+                <td>
+                
+                <!-- YouTube SaaS -->
+                <iframe id="trailer" width="600" height="400" src="https://www.youtube.com/embed/UtjH6Sk7Gxs?si=BkLJQJtIaReWp0pm&amp;controls=1&amp;start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                </td>
+                
+                <td>
+                    <b style="font-size: 40;">Anyone But You</b>
+                    <p><b>RELEASE DATE:</b> 11 January 2024 <b>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; RUNNING TIME:</b> 103 minutes</p>
+                    <p style="margin-right: 15px;">After an amazing first date, Bea and Ben's fiery attraction turns ice cold- until they find themselves unexpectedly reunited at a destination wedding in Australia. So they do what any two mature adults would do: pretend to be a couple.</p>
+                    <table>
+                        <tr><td><b>Film genre:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>Comedy</td></tr>
+                        <tr><td><b>Cast:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>Sydney Sweeney, Glen Powell, Alexandra Shipp</td></tr>
+                        <tr><td><b>Director:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>Will Gluck</td></tr>
+                        <tr><td><b>Production:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>USA 2023</td></tr>
+                        <tr><td><b>Original language:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>EN</td></tr>
+                        <tr><td><b>Age restrictions:</b></td><td>&nbsp;&nbsp;&nbsp;</td><td>12+</td></tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr id="rating">
+                <td colspan="3">
+                Users Rating:&nbsp;&nbsp;&nbsp;<img id="img1star" src="Star.png" alt="Star" height="40px" width="40px"><img id="img2star" src="Star.png" alt="Star" height="40px" width="40px"><img id="img3star" src="Star.png" alt="Star" height="40px" width="40px"><img id="img4star" src="Star.png" alt="Star" height="40px" width="40px"><img id="img5star" src="Star.png" alt="Star" height="40px" width="40px">
+                &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                
+                <!-- IMDB SaaS -->
+                <span class="imdbRatingPlugin" data-user="ur177947967" data-title="tt26047818" data-style="p2">
+                <a href="https://www.imdb.com/title/tt26047818/?ref_=plg_rt_1"><img id="imdb" src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt="Anyone But You (2023) on IMDb" height="30px" width="70px"/></a></span>
+                <script>(function(d,s,id){var js,stags=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js";stags.parentNode.insertBefore(js,stags);})(document,"script","imdb-rating-api");</script>
+                
+                &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <button id="reviewbutton" type="button" onclick="toggleForm()">Write a Review</button>
+                &nbsp;&nbsp;<button id="showbutton" type="button" onclick="getReviews()">Show Reviews</button>
+                <b id="TTR">&nbsp;&nbsp;Translate reviews:&nbsp;&nbsp;</b>
+                <button id="languageButtonEN" type="button" onclick="toggleLanguageEN()"></button>&nbsp;
+                <button id="languageButtonFR" type="button" onclick="toggleLanguageFR()"></button>&nbsp;
+                <button id="languageButtonDE" type="button" onclick="toggleLanguageDE()"></button>&nbsp;
+                <button id="languageButtonIT" type="button" onclick="toggleLanguageIT()"></button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                <table id="formtable">
+                <form>
+                    <tr>
+                        <td colspan="3">Enter your name:&nbsp;&nbsp;<input type="text" id="name" name="name" maxlength="50" size="24"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Your rating:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="1star" name="stars" value="1">&nbsp;1&nbsp;
+                            <input type="radio" id="2star" name="stars" value="2">&nbsp;2&nbsp;
+                            <input type="radio" id="3star" name="stars" value="3">&nbsp;3&nbsp;
+                            <input type="radio" id="4star" name="stars" value="4">&nbsp;4&nbsp;
+                            <input type="radio" id="5star" name="stars" value="5" checked>&nbsp;5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 15px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Plot:&nbsp;&nbsp;<select id="plot" name="plot">
+                            <option value="Extremely Good">Extremely Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Satisfied">Satisfied</option>
+                            <option value="Bad">Bad</option>
+                            <option value="Worst">Worst</option>
+                        </select></td>
+                        <td style="text-align: center;">Acting:&nbsp;&nbsp;<select id="acting" name="acting">
+                            <option value="Extremely Good">Extremely Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Satisfied">Satisfied</option>
+                            <option value="Bad">Bad</option>
+                            <option value="Worst">Worst</option>
+                        </select></td>
+                        <td style="text-align: right;">Soundtrack:&nbsp;&nbsp;<select id="sound" name="sound">
+                            <option value="Extremely Good">Extremely Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Satisfied">Satisfied</option>
+                            <option value="Bad">Bad</option>
+                            <option value="Worst">Worst</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 15px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="review" name="review" maxlength="1000" placeholder="Write your review here (Maximum of 1,000 characters)"></textarea>
+                            <p id="charsCounter"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 15px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: right;">
+                            <input id="sendbutton" type="button" value="Send" onclick="verifyInput()">
+                            <input id="resetbutton" type="button" value="Reset" onclick="cleanForm()">
+                        </td>
+                    </tr>
+                </form>
+                </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    <table id="reviewstable">
+                        <!-- innerHTML by DisplayReview Function in HomePage.js -->
+                    </table>
+                </td>
+            </tr>
+
+            <tr id="links">
+                <td colspan="3">The information was copied from <a id="planetlink" href="https://www.planetcinema.co.il/#/">"Planet Cinema"</a></td>
+            </tr>
+
+        </table>
+    </body>
+
+</html>
